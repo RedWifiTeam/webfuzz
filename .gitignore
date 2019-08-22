@@ -1,0 +1,3 @@
+webfuzz
+dicts/dic.db
+*.log
