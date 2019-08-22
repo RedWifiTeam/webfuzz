@@ -272,7 +272,9 @@ func StartToBrute(wg *sync.WaitGroup, webType string, threadCount int, interval 
 			for {
 				select {
 				case <-time.After(timeout):
-					cancelChan <- true
+					if cancelChan != nil {
+						cancelChan <- true
+					}
 					return
 				case <-cancelChan:
 					return

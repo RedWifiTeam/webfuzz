@@ -110,10 +110,10 @@ func main() {
 				if strings.HasSuffix(BaseURL, "/") {
 					BaseURL = BaseURL[:len(BaseURL)-1]
 				}
-				log.Println("[+] Target   : ", BaseURL)
-				log.Println("[+] Thread   : ", thread)
-				log.Println("[+] Interval : ", interval)
-				log.Println("[+] Dict     : ", dbFile)
+				Info.Println("|| Target   : ", BaseURL)
+				Info.Println("|| Thread   : ", thread)
+				Info.Println("|| Interval : ", interval)
+				Info.Println("|| Dict     : ", dbFile)
 				// Prepare for brute
 				if PrepareForBrute(method, action) {
 					Dispatcher(thread, interval, webType, dbFile)
